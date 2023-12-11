@@ -1,15 +1,15 @@
 import "./globals.css";
 import { ReactNode } from "react";
-import SessionProvider from "@/app/context/SessionProvider";
+import NextAuthProvider from "./context/NextAuthProvider";
 
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang="en">
-      <SessionProvider>
+      <NextAuthProvider>
         <body>
           <div>{children}</div>
         </body>
-      </SessionProvider>
+      </NextAuthProvider>
     </html>
   );
 }
